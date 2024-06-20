@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weekly Schedule</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        .green { background-color: #99cc00; }
+        .blue { background-color: #00ccff; }
+        .yellow { background-color: #ffcc00; }
+        .white { background-color: #ffffff; }
+    </style>
+</head>
+<body>
+<h2>Weekly Schedule</h2>
+<table>
+    <tr>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Status</th>
+    </tr>
+    <tr th:each="day : ${schedule}">
+        <td th:text="${schedule}"></td>
+    </tr>
+</table>
+</body>
+</html>
